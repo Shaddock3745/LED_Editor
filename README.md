@@ -79,7 +79,18 @@ cp src/form/*.fxml bin/form/
 java --module-path <JavaFX SDK 路徑>/lib --add-modules javafx.controls,javafx.fxml -cp bin form.MainApplication
 ```
 
-也可以用 Eclipse 匯入專案（File → Import → Existing Projects into Workspace）。`.classpath` 裡的 JavaFX 路徑是我電腦上的位置，要改成自己的 JavaFX SDK 路徑。
+### 使用 IntelliJ IDEA
+
+1. File → Open，選擇專案資料夾，出現提示時選擇以 Eclipse 專案匯入
+2. File → Project Structure → Project，SDK 選 JDK 22 以上
+3. File → Project Structure → Libraries，按 `+` → Java，選 JavaFX SDK 的 `lib` 資料夾（若匯入時帶進了舊的 JavaFX 路徑，先刪除那個 Library）
+4. Run → Edit Configurations，主類別設為 `form.MainApplication`，在 VM options 填入：
+
+   ```
+   --module-path "<JavaFX SDK 路徑>/lib" --add-modules javafx.controls,javafx.fxml
+   ```
+
+   沒有這行會出現 `JavaFX runtime components are missing` 錯誤
 
 ## 專案結構
 
