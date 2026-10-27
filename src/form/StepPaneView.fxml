@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="250.0" style="-fx-background-radius: 10; -fx-background-color: lightgray; -fx-background-insets: 2; -fx-border-color: black; -fx-border-radius: 10; -fx-border-insets: 2;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="form.StepPaneController">
+   <children>
+      <Label fx:id="stepName" layoutX="20.0" layoutY="20.0" text="Label">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="renameStep" layoutX="175.0" layoutY="10.0" mnemonicParsing="false" text="🖊">
+         <tooltip>
+            <Tooltip text="Rename" />
+         </tooltip>
+      </Button>
+      <Button fx:id="copyStep" layoutX="175.0" layoutY="40.0" mnemonicParsing="false" text="⧉">
+         <tooltip>
+            <Tooltip text="Copy" />
+         </tooltip>
+      </Button>
+      <Button fx:id="deleteStep" layoutX="175.0" layoutY="70.0" mnemonicParsing="false" text="❌">
+         <tooltip>
+            <Tooltip text="Delete" />
+         </tooltip>
+      </Button>
+      <Label layoutX="20.0" layoutY="60.0" text="Delay：" />
+      <Spinner fx:id="delayTime" editable="true" layoutX="65.0" layoutY="57.0" prefWidth="70.0" />
+      <Button fx:id="goUp" layoutX="210.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" text="↑">
+         <tooltip>
+            <Tooltip text="Go up" />
+         </tooltip>
+      </Button>
+      <Button fx:id="goDown" layoutX="210.0" layoutY="50.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="30.0" text="↓">
+         <tooltip>
+            <Tooltip text="Go down" />
+         </tooltip>
+      </Button>
+   </children>
+</Pane>
